@@ -69,6 +69,8 @@ The mansion contains the following items:
 
 Your assignment is to use dynamic programming generate the solution matrix to this problem so that The Compiler knows which items to steal.
 
+NOTE: Ignore size constraints and use the weight of the items only.
+
 
 
 # C3ProjectTemplate
