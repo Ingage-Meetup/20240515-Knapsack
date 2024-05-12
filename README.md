@@ -33,6 +33,14 @@ Dynamic programming breaks problems down into simpler subproblems. It is solves 
 
 [GeeksforGeeks](https://www.geeksforgeeks.org/) has a nice discussion of dynamic programming at https://www.geeksforgeeks.org/dynamic-programming/. It may be helpful in solving this month's kata.
 
+## Your Assignment
+
+This month, your assignment is to help the world renown jewel-thief and cat-burglar, Ken "The Compiler" Baum as he plunders the home of famous billionaire, Matt Brewer. Matt became a billionaire by inventing "Invisible Socks" - a revolutionary fashion statement that took the world by storm, offering the comfort of socks without the unsightly appearance.
+
+The Compiler has done extensive research on the Brewer Compound. He needs to get in and out quickly and thus the size of his official Benny the Dip Burglar Sack :tm: is limited to carrying 30 pounds. The burglar carries a sack with limited capacity and must choose which items to steal to maximize their total value. The mansion contains the following items:
+
+
+
 # C3ProjectTemplate
 
 See solutions in different languages in the "Templates" directory. Once you decide which language you'd like to use,
