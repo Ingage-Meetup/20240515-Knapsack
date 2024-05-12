@@ -37,7 +37,37 @@ Dynamic programming breaks problems down into simpler subproblems. It is solves 
 
 This month, your assignment is to help the world renown jewel-thief and cat-burglar, Ken "The Compiler" Baum as he plunders the home of famous billionaire, Matt Brewer. Matt became a billionaire by inventing "Invisible Socks" - a revolutionary fashion statement that took the world by storm, offering the comfort of socks without the unsightly appearance.
 
-The Compiler has done extensive research on the Brewer Compound. He needs to get in and out quickly and thus the size of his official Benny the Dip Burglar Sack :tm: is limited to carrying 30 pounds. The burglar carries a sack with limited capacity and must choose which items to steal to maximize their total value. The mansion contains the following items:
+The Compiler has done extensive research on the Brewer Compound. He will be able to get by the security system, but there are dozens of guards moving about the mansion so he will need to get in and out quickly. He also needs to move fast, so he can't carry so much loot that it slows him down. Therefor he chooses a size small Benny the Dip Burglar Sack :tm: which is limited to carrying 30 pounds. With this relatively tiny capacity compared to Brewer's immense wealth, he must choose carefully which items to steal so he can maximize the value of his haul. Not surprisingly, he relies on his programming background to solve the problem.
+
+Noting that this problem is the very definition of the knapsack problem, he chooses to use dynamic programming to ensure he can get the maximum value for the items he can fit in the bag.
+
+The mansion contains the following items:
+
+
+| Item                               | Weight (lbs) | Value ($) |
+|------------------------------------|--------------|-----------|
+| Diamond necklace                   | 2            | 50,000    |
+| Antique gold pocket watch          | 1            | 8,000     |
+| Rare vintage wine collection       | 20           | 15,000    |
+| Original Picasso painting          | 6            | 200,000   |
+| Emerald-encrusted bracelet         | 1            | 25,000    |
+| Sculpted marble statue             | 50           | 30,000    |
+| Signed first edition books         | 10           | 12,000    |
+| Precious ancient coins             | 3            | 18,000    |
+| Designer handbags                  | 4            | 6,000     |
+| High-end electronics               | 8            | 10,000    |
+| Expensive leather jackets          | 6            | 4,000     |
+| Rare sports memorabilia            | 3            | 7,000     |
+| Handcrafted silk rug               | 15           | 9,000     |
+| Limited edition designer shoes     | 2            | 3,000     |
+| Platinum cufflinks                 | 1            | 5,000     |
+| Valuable postage stamp collection  | 2            | 14,000    |
+| Vintage movie posters              | 3            | 2,500     |
+| Collectible action figures         | 5            | 1,500     |
+| Fine china dining set              | 12           | 8,000     |
+| Swarovski crystal figurines        | 7            | 4,500     |
+
+Your assignment is to use dynamic programming generate the solution matrix to this problem so that The Compiler knows which items to steal.
 
 
 
