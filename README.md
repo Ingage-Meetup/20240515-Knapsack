@@ -33,6 +33,67 @@ Dynamic programming breaks problems down into simpler subproblems. It is solves 
 
 [GeeksforGeeks](https://www.geeksforgeeks.org/) has a nice discussion of dynamic programming at https://www.geeksforgeeks.org/dynamic-programming/. It may be helpful in solving this month's kata.
 
+## Solution Steps
+
+To solve the Knapsack Problem using dynamic programming, you can follow these steps:
+
+1. Define the problem:
+
+Given a set of items, each with a weight and a value, and a knapsack with a maximum weight capacity, determine the maximum total value of items that can be put into the knapsack without exceeding its capacity.
+
+
+3. Identify the subproblems:
+
+Define a subproblem as the maximum value that can be obtained by considering a subset of items and a smaller knapsack capacity.
+Let dp[i][w] represent the maximum value that can be obtained by considering items from index 0 to i and a knapsack capacity of w.
+
+
+3. Define the base cases:
+
+Set dp[0][w] = 0 for all w from 0 to the maximum knapsack capacity, as no items are considered.
+Set dp[i][0] = 0 for all i from 0 to the number of items, as the knapsack capacity is 0.
+
+
+4. Define the recurrence relation:
+
+For each item i and knapsack capacity w, there are two options:
+
+Include the item: If the weight of item i is less than or equal to w, you can include it and add its value to the maximum value obtained from the remaining capacity (w - weight of item i) and the subproblem considering items up to index i-1.
+Exclude the item: Skip the item and consider the maximum value obtained from the subproblem considering items up to index i-1 and the same capacity w.
+
+
+The recurrence relation can be written as:
+
+    dp[i][w] = max(dp[i-1][w], value[i] + dp[i-1][w-weight[i]]) if weight[i] <= w
+    dp[i-1][w] if weight[i] > w
+
+
+
+5. Fill the DP table:
+
+Initialize a 2D DP table of size (number of items + 1) × (maximum knapsack capacity + 1) with base cases.
+Iterate through the items from index 1 to the number of items.
+For each item, iterate through the knapsack capacities from 1 to the maximum capacity.
+Apply the recurrence relation to fill the DP table.
+
+
+6. Retrieve the maximum value:
+
+The maximum value that can be obtained will be stored in dp[number of items][maximum knapsack capacity].
+
+
+7. Reconstruct the selected items (optional):
+
+To determine which items are selected, you can backtrack from the final cell of the DP table.
+If the value in the current cell is greater than the value in the cell above it, the current item is included in the knapsack.
+Move to the cell corresponding to the remaining capacity and the previous item.
+Repeat until you reach the first row or the first column of the DP table.
+
+
+
+The time complexity of this dynamic programming solution is O(nW), where n is the number of items and W is the maximum knapsack capacity. The space complexity is also O(nW) to store the DP table.
+Note that this solution assumes that the weights and values are integers. If they are floating-point numbers, you may need to modify the solution accordingly.
+
 ## Your Assignment
 
 This month, your assignment is to help the world renown jewel-thief and cat-burglar, Ken "The Compiler" Baum as he plunders the home of famous billionaire, Matt Brewer. Matt became a billionaire by inventing "Invisible Socks" - a revolutionary fashion statement that took the world by storm, offering the comfort of socks without the unsightly appearance.
